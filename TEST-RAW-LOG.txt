@@ -1,0 +1,60 @@
+
+> nasaq-ai@1.1.0-preview test
+> node --test tools/*.test.cjs
+
+TAP version 13
+# Subtest: import refuses wrong SHA-256 and partial text
+ok 1 - import refuses wrong SHA-256 and partial text
+  ---
+  duration_ms: 256.737687
+  type: 'test'
+  ...
+# NASAQ request failed: { type: 400, requestUrl: '/api/research' }
+# NASAQ request failed: { type: 415, requestUrl: '/api/research' }
+# NASAQ request failed: { type: 413, requestUrl: '/api/research' }
+# NASAQ request failed: { type: 500, requestUrl: '/api/research' }
+# Subtest: valid coordinates never certify missing text
+ok 2 - valid coordinates never certify missing text
+  ---
+  duration_ms: 4.648191
+  type: 'test'
+  ...
+# Subtest: poisoned browser cache cannot be certified
+ok 3 - poisoned browser cache cannot be certified
+  ---
+  duration_ms: 19.56146
+  type: 'test'
+  ...
+# Subtest: API fails closed without corpus, returns no internals
+ok 4 - API fails closed without corpus, returns no internals
+  ---
+  duration_ms: 39.250616
+  type: 'test'
+  ...
+# Subtest: Firestore owner field immutable
+ok 5 - Firestore owner field immutable
+  ---
+  duration_ms: 0.392294
+  type: 'test'
+  ...
+# Subtest: guest data confined to session, account bookmarks namespaced
+ok 6 - guest data confined to session, account bookmarks namespaced
+  ---
+  duration_ms: 91.499367
+  type: 'test'
+  ...
+# Subtest: protected endpoint enforces auth, JSON, body cap, and hides exception
+ok 7 - protected endpoint enforces auth, JSON, body cap, and hides exception
+  ---
+  duration_ms: 46.778221
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1109.05151
